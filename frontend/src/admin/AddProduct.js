@@ -35,10 +35,7 @@ const AddProduct = () => {
     getAllCategories()
       .then((response) => {
         if (response.err) {
-          setValues({
-            ...values,
-            error: response.err,
-          });
+          console.log(response.err);
         } else {
           setValues({
             ...values,
@@ -51,7 +48,6 @@ const AddProduct = () => {
         console.log(err);
       });
   };
-
   useEffect(() => {
     preload();
   }, []);
