@@ -22,7 +22,7 @@ exports.getCategoryById = (req, res, next, id) => {
 
     if (!category) {
       return res.status(404).json({
-        msg: "Category not found",
+        err: "Category not found",
       });
     }
 

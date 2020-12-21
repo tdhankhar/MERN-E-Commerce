@@ -5,6 +5,7 @@ const {
   getProductById,
   createProduct,
   getProduct,
+  getProductImage,
   getAllProducts,
   deleteProduct,
   updateProduct,
@@ -17,6 +18,7 @@ router.param("userId", getUserById);
 router.param("productId", getProductById);
 
 router.get("/product/:productId", getProduct);
+router.get("/product/image/:productId", getProductImage);
 router.get("/products", getAllProducts);
 router.post(
   "/product/create/:userId",

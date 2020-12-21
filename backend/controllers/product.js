@@ -23,14 +23,12 @@ exports.getProductById = (req, res, next, id) => {
     });
 };
 
-// TO-DO: figure out how and when to call this middleware
-exports.getProductImage = (req, res, next) => {
+exports.getProductImage = (req, res) => {
   if (req.product.image.data) {
     res.set("Content-Type", req.product.image.contentType);
     // DOUBT: return or not?
     res.send(req.product.image.data);
   }
-  next();
 };
 
 exports.getProduct = (req, res) => {

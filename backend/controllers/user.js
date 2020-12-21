@@ -88,7 +88,7 @@ exports.pushOrderInPurchaseList = (req, res, next) => {
   let purchase = {
     products,
     amount: req.body.order.amount,
-    transaction_id: req.body.order.transaction_id,
+    transaction_id: req.body.order.transactionId,
   };
 
   User.findOneAndUpdate(
